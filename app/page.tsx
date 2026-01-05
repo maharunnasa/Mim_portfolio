@@ -118,7 +118,7 @@ const affiliations = await client.fetch(`
         </section>
 
         <section id="publications">
-           <Publications data={gpublications} />
+           <Publications data={publications} />
        </section>
 
         <section id="affiliations">
