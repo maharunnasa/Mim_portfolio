@@ -110,7 +110,10 @@ const affiliations = await client.fetch(`
         </section>
 
         <section id="skills">
-          <SkillsDiagram skill={skills} />
+          <SkillsDiagram skillsgit add .
+git commit -m "Fix SkillsDiagram prop name"
+git push origin bootstrap
+={skills} />
         </section>
 
         <section id="projects">
