@@ -28,7 +28,7 @@ export default function Achievements({ data }: AchievementsProps) {
   const visibleData = showAll ? sortedData : sortedData.slice(0, 3);
 
   return (
-    <section id="achievements" className="py-24 px-6 md:px-20 bg-[#1f172a]">
+    <section id="achievements" className="py-24 px-6 md:px-20 bg-[#241b2f]">
       <h2 className="text-4xl font-bold text-center text-white mb-16">
         Achievements
       </h2>

@@ -69,9 +69,12 @@ export default function Hero({ about }: HeroProps) {
             Download CV
           </a>
 
-          <button className="border border-white/30 px-6 py-3 rounded-lg text-white hover:bg-white/10 transition">
+          <a 
+           href="#contact"
+          className="border border-white/30 px-6 py-3 rounded-lg text-white hover:bg-white/10 transition
+          ">
             Contact
-          </button>
+          </a>
         </div>
       </div>
 

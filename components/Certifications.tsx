@@ -15,18 +15,30 @@ type CertificationsProps = {
   data?: Certification[];
 };
 
+const parseDate = (value?: string) => {
+  if (!value) return new Date(0);
+
+  if (/^\d{4}$/.test(value)) {
+    return new Date(`${value}-01-01`);
+  }
+
+  return new Date(value);
+};
+
 export default function Certifications({ data }: CertificationsProps) {
   const [showAll, setShowAll] = useState(false);
 
   if (!Array.isArray(data) || data.length === 0) return null;
 
-  const visibleData = showAll ? data : data.slice(0, 3);
+  // 🔥 SORT: Newest → Oldest
+  const sortedData = [...data].sort(
+    (a, b) => parseDate(b.year).getTime() - parseDate(a.year).getTime()
+  );
+
+  const visibleData = showAll ? sortedData : sortedData.slice(0, 3);
 
   return (
-    <section
-      id="certifications"
-      className="py-24 px-6 md:px-20 bg-[#2b1f38]"
-    >
+    <section id="certifications" className="py-24 px-6 md:px-20 bg-[#1a1325]">
       <h2 className="text-4xl font-bold text-center mb-16 text-white">
         Certifications
       </h2>
@@ -97,7 +109,7 @@ export default function Certifications({ data }: CertificationsProps) {
         <div className="mt-12 text-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 text-sm rounded-full border border-purple-400/40 text-purple-300 bg-gradient-to-r from-purple-500 to-pink-500"
+            className="px-6 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:bg-purple-600 transition"
           >
             {showAll ? "Show Less" : "See More"}
           </button>

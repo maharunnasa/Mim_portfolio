@@ -36,7 +36,7 @@ export default function Footer({ data }: FooterProps) {
             Quick Links
           </h3>
           <ul className="space-y-3 text-sm">
-            {["home", "about", "skills", "education", "projects", "contact"].map(
+            {["home", "about", "skills", "education", "projects", "publications"].map(
               (item) => (
                 <li key={item}>
                   <a href={`#${item}`} className="hover:text-purple-400">
@@ -50,7 +50,7 @@ export default function Footer({ data }: FooterProps) {
 
         {/* CONTACT */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-4">
+          <h3 id="contact" className="text-xl font-semibold text-white mb-4">
             Contact Info
           </h3>
 

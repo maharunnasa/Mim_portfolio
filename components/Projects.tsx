@@ -42,7 +42,7 @@ export default function Projects({ projects }: ProjectsProps) {
   const displayProjects = showAll ? sortedProjects : sortedProjects.slice(0, 3);
 
   return (
-    <section id="projects" className="py-24 px-6 md:px-20 bg-[#241b2f]">
+    <section id="projects" className="py-24 px-6 md:px-20 bg-[#1a1325]">
       <h2 className="text-4xl font-bold text-center mb-16">Projects</h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">

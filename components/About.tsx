@@ -3,7 +3,15 @@
 import { motion } from "framer-motion";
 import { aboutData } from "@/data/about";
 
-export default function About() {
+type AboutProps = {
+  about: {
+    name: string;
+    bio: string;
+    profileImage: string;
+  };
+};
+
+export default function About({ about }: AboutProps) {
   return (
     <section
       id="about"
