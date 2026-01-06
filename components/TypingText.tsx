@@ -10,7 +10,7 @@ export default function TypingText() {
           "Web Developer",
           "UI/UX Designer",
           "Deep Learning Researcher",
-          "Frontend Designert",
+          "Frontend Designer",
         ]}
         loop={0}
         cursor
