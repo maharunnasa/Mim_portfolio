@@ -70,7 +70,7 @@ export default function Navbar({
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="font-signature text-3xl font-extrabold bg-gradient-to-r from-blue-300 to-pink-300 bg-clip-text text-transparent">
-          Mim
+          MiM
         </h1>
 
         {/* Desktop */}
