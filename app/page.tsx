@@ -7,7 +7,6 @@ import Publications from "@/components/Publications";
 import Affiliations from "@/components/Affiliations";
 import Achievements from "@/components/Achievements";
 import Certifications from "@/components/Certifications";
-import EducationTimeline from "@/components/EducationTimeline";
 import Footer from "@/components/Footer";
 import { client } from "@/lib/sanity";
 import { footerQuery } from "@/lib/queries";
@@ -81,16 +80,6 @@ const affiliations = await client.fetch(`
 `);
     const footer = await client.fetch(footerQuery);
 
-  const education = await client.fetch(`
-  *[_type=="education"] | order(year desc){
-    degree,
-    institution,
-    year,
-    details,
-    "logoUrl": logo.asset->url
-  }
-`);
-
   return (
     <>
       <Navbar navigation={navigation} />
@@ -103,10 +92,6 @@ const affiliations = await client.fetch(`
 
         <section id="about">
           <About about={about} />
-        </section>
-
-        <section id="education">
-          <EducationTimeline data={education} />
         </section>
 
         <section id="skills">
